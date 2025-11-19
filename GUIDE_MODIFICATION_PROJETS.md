@@ -38,3 +38,4 @@ src/components/Blog/projectsData.ts
 Utilisez des descriptions orientées résultats (ex : *“+18% de NPS en 3 mois”*) et limitez les tags à 2-3 mots clés per projet pour garder la carte lisible.
 
 
+
