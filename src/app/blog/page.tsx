@@ -1,12 +1,11 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Link from "next/link";
+import ProjectCard from "@/components/Blog/ProjectCard";
+import projectsData from "@/components/Blog/projectsData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CX Solutions | CX System - News and Insights",
-  description: "Discover our latest solutions, tips and trends in customer experience. Stay informed about CX System innovations.",
+  title: "Projets | CX System - Nos Réalisations",
+  description: "Découvrez nos projets réalisés pour nos clients. Chaque cas illustre notre approche centrée sur l'expérience client et l'impact mesurable.",
   // other metadata
 };
 
@@ -14,46 +13,30 @@ const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Solutions & News"
-        description="Explore our innovative solutions and discover the latest trends in customer experience. Use cases, expert advice and success stories."
+        pageName="Nos Projets"
+        description="Parcourez une sélection de projets que nous avons déjà livrés pour nos clients. Chaque cas illustre notre approche centrée sur l'expérience client et l'impact mesurable."
       />
-
-      <section className="pt-12">
-        <div className="container">
-          <div className="flex flex-col gap-6 rounded-2xl bg-primary/5 px-8 py-10 text-center md:flex-row md:items-center md:justify-between md:text-left">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-                Nouveauté
-              </p>
-              <h2 className="mt-2 text-2xl font-bold text-dark dark:text-white">
-                Découvrez nos projets déployés sur le terrain
-              </h2>
-              <p className="mt-3 text-base text-body-color">
-                Accédez à une sélection de cas clients illustrés avec images et
-                résultats pour vous inspirer.
-              </p>
-            </div>
-            <div>
-              <Link
-                href="/blog/projects"
-                className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-medium text-white transition hover:bg-primary/90"
-              >
-                Voir les projets
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="pt-[120px] pb-[120px]">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
+          <div className="mb-12 max-w-3xl text-center lg:mx-auto">
+            <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl">
+              Projets Réalisés par CX Systems
+            </h2>
+            <p className="text-base leading-relaxed text-body-color">
+              Découvrez nos réalisations concrètes. Chaque projet combine design d'expérience, 
+              technologie et accompagnement terrain pour créer des solutions innovantes qui 
+              transforment l'expérience client.
+            </p>
+          </div>
+
+          <div className="-mx-4 flex flex-wrap items-stretch">
+            {projectsData.map((project) => (
               <div
-                key={blog.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
+                key={project.id}
+                className="w-full px-4 md:w-1/2 xl:w-1/3 flex"
               >
-                <SingleBlog blog={blog} />
+                <ProjectCard project={project} />
               </div>
             ))}
           </div>
