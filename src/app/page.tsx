@@ -16,6 +16,10 @@ export default function Home() {
       <Services />
       <AboutSectionOne />
       <AboutSectionTwo />
+<<<<<<< HEAD
+=======
+      <Testimonials />
+>>>>>>> 2092e6bb0279a40314130ee78153b2aa9ab3df9e
       <Contact />
     </>
   );
