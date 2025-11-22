@@ -47,7 +47,7 @@ const Header = () => {
             : "absolute bg-transparent"
         }`}
         style={{ 
-          minHeight: sticky ? "80px" : "240px"
+          minHeight: "70px"
         }}
       >
         <div className="container">
@@ -55,20 +55,18 @@ const Header = () => {
             <div className="w-auto max-w-full px-4 xl:mr-12 flex items-center">
               <Link
                 href="/"
-                className={`header-logo block flex items-center group logo-hover ${
-                  sticky ? "py-2 lg:py-2" : "py-4 lg:py-8"
-                } `}
+                className="header-logo block flex items-center group logo-hover py-1 lg:py-1"
               >
                 <Image
                   src="/images/logo/logo-2.png"
                   alt="logo"
-                  width={500}
-                  height={220}
+                  width={250}
+                  height={50}
                   className="dark:hidden logo-image transition-all duration-300"
                   style={{ 
-                    height: sticky ? "60px" : "220px", 
+                    height: "50px", 
                     width: "auto", 
-                    maxWidth: sticky ? "300px" : "500px",
+                    maxWidth: "250px",
                     objectFit: "contain" 
                   }}
                   priority
@@ -77,13 +75,13 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
-                  width={500}
-                  height={220}
+                  width={250}
+                  height={50}
                   className="hidden dark:block logo-image transition-all duration-300"
                   style={{ 
-                    height: sticky ? "60px" : "220px", 
+                    height: "50px", 
                     width: "auto", 
-                    maxWidth: sticky ? "300px" : "500px",
+                    maxWidth: "250px",
                     objectFit: "contain" 
                   }}
                   priority
@@ -129,7 +127,7 @@ const Header = () => {
                           {menuItem.path ? (
                             <Link
                               href={menuItem.path}
-                              className={`relative flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 transition-all duration-300 ${
+                              className={`relative flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-4 transition-all duration-300 ${
                                 usePathName === menuItem.path
                                   ? "text-primary dark:text-white"
                                   : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -142,7 +140,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
+                              className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-4 dark:text-white/70 dark:group-hover:text-white"
                             >
                               {menuItem.title}
                               <span className="pl-3">
