@@ -12,7 +12,7 @@ const AboutSectionTwo = () => {
               <div className="relative w-full" style={{ paddingBottom: '96%' }}>
                 <Image
                   src="/images/about/about-image-2.svg"
-                  alt="about image"
+                  alt="image à propos"
                   fill
                   className="object-contain drop-shadow-three dark:hidden"
                   sizes="(max-width: 768px) 100vw, 500px"
@@ -20,7 +20,7 @@ const AboutSectionTwo = () => {
                 />
                 <Image
                   src="/images/about/about-image-2-dark.svg"
-                  alt="about image"
+                  alt="image à propos"
                   fill
                   className="hidden object-contain drop-shadow-three dark:block"
                   sizes="(max-width: 768px) 100vw, 500px"

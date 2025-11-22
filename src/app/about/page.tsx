@@ -35,8 +35,8 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About CX System"
-        description="We are a passionate team dedicated to revolutionizing customer experience through innovative technologies and personalized solutions."
+        pageName="À Propos de CX System"
+        description="Nous sommes une équipe passionnée dédiée à la révolution de l'expérience client grâce à des technologies innovantes et des solutions personnalisées."
       />
       <AboutSectionOne />
       <AboutSectionTwo />
