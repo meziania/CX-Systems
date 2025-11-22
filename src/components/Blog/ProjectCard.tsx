@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Project } from "@/types/project";
-import ImageLightbox from "./ImageLightbox";
 
 type ProjectCardProps = {
   project: Project;
@@ -13,7 +12,6 @@ const MAX_DESCRIPTION_LENGTH = 150;
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const description = project.description;
   const isLongDescription = description.length > MAX_DESCRIPTION_LENGTH;
   const truncatedDescription = isLongDescription
@@ -33,10 +31,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <div className="group mb-10 overflow-hidden rounded-lg bg-white shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 dark:bg-[#1D2144] dark:hover:shadow-primary/20">
-      <div 
-        className="relative h-[220px] w-full cursor-pointer overflow-hidden"
-        onClick={() => setIsLightboxOpen(true)}
-      >
+      <div className="relative h-[220px] w-full overflow-hidden">
         <Image
           src={project.image}
           alt={project.title}
@@ -78,7 +73,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           )}
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 text-sm">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-4 text-sm">
           <p className="font-semibold text-dark dark:text-white">
             Client : <span className="font-normal text-body-color">{project.client}</span>
           </p>
@@ -93,14 +88,24 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             ))}
           </div>
         </div>
-      </div>
 
-      <ImageLightbox
-        src={project.image}
-        alt={project.title}
-        isOpen={isLightboxOpen}
-        onClose={() => setIsLightboxOpen(false)}
-      />
+        {/* Bouton Demo */}
+        {project.demoUrl && (
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-purple-600 px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Voir la Démo
+            </a>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

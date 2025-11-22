@@ -35,26 +35,26 @@ const AboutSectionTwo = () => {
               <div className="max-w-[470px]">
                 <div className="mb-8 transition-all duration-300 hover:translate-x-2">
                   <h3 className="mb-3 text-xl font-bold text-black transition-colors duration-300 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl hover:text-primary">
-                    Enterprise-Grade Technology
+                    Technologie de Niveau Entreprise
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                    Built with cutting-edge technology and best practices, our platform ensures reliability, scalability, and performance for businesses of all sizes.
+                    Construit avec des technologies de pointe et les meilleures pratiques, notre plateforme assure fiabilité, scalabilité et performance pour les entreprises de toutes tailles.
                   </p>
                 </div>
                 <div className="mb-8 transition-all duration-300 hover:translate-x-2">
                   <h3 className="mb-3 text-xl font-bold text-black transition-colors duration-300 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl hover:text-primary">
-                    Premium Support
+                    Support Premium
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                    Our dedicated support team is available 24/7 to help you maximize the value of CX System and ensure your success.
+                    Notre équipe de support dédiée est disponible 24/7 pour vous aider à maximiser la valeur de CX System et assurer votre succès.
                   </p>
                 </div>
                 <div className="mb-0 transition-all duration-300 hover:translate-x-2">
                   <h3 className="mb-3 text-xl font-bold text-black transition-colors duration-300 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl hover:text-primary">
-                    Continuous Innovation
+                    Innovation Continue
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                    We continuously evolve our platform with new features and improvements based on customer feedback and industry trends.
+                    Nous faisons évoluer continuellement notre plateforme avec de nouvelles fonctionnalités et améliorations basées sur les retours clients et les tendances du secteur.
                   </p>
                 </div>
               </div>

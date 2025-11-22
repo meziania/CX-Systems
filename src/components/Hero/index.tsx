@@ -115,6 +115,13 @@ const Hero = () => {
               r="132.862"
               transform="rotate(114.874 184.521 315.521)"
               stroke="url(#paint4_linear_25:217)"
+              fill="none"
+              className="animated-circle"
+              style={{
+                strokeDasharray: 1000,
+                strokeDashoffset: 1000,
+                animation: "drawPath 4s ease-in-out 1s forwards",
+              }}
             />
             <circle
               opacity="0.8"
@@ -123,6 +130,13 @@ const Hero = () => {
               r="179.5"
               transform="rotate(-30 356 290)"
               stroke="url(#paint5_linear_25:217)"
+              fill="none"
+              className="animated-circle"
+              style={{
+                strokeDasharray: 1200,
+                strokeDashoffset: 1200,
+                animation: "drawPath 4s ease-in-out 1.3s forwards",
+              }}
             />
             <circle
               opacity="0.8"
@@ -220,22 +234,47 @@ const Hero = () => {
             viewBox="0 0 364 201"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="animated-svg"
           >
             <path
               d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
               stroke="url(#paint0_linear_25:218)"
+              className="animated-path"
+              style={{
+                strokeDasharray: 1000,
+                strokeDashoffset: 1000,
+                animation: "drawPath 3s ease-in-out 0.5s forwards",
+              }}
             />
             <path
               d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
               stroke="url(#paint1_linear_25:218)"
+              className="animated-path"
+              style={{
+                strokeDasharray: 1000,
+                strokeDashoffset: 1000,
+                animation: "drawPath 3s ease-in-out 0.8s forwards",
+              }}
             />
             <path
               d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
               stroke="url(#paint2_linear_25:218)"
+              className="animated-path"
+              style={{
+                strokeDasharray: 1000,
+                strokeDashoffset: 1000,
+                animation: "drawPath 3s ease-in-out 1.1s forwards",
+              }}
             />
             <path
               d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
               stroke="url(#paint3_linear_25:218)"
+              className="animated-path"
+              style={{
+                strokeDasharray: 1000,
+                strokeDashoffset: 1000,
+                animation: "drawPath 3s ease-in-out 1.4s forwards",
+              }}
             />
             <circle
               opacity="0.8"
@@ -244,6 +283,13 @@ const Hero = () => {
               r="49.7205"
               transform="rotate(-13.421 214.505 60.5054)"
               stroke="url(#paint4_linear_25:218)"
+              fill="none"
+              className="animated-circle"
+              style={{
+                strokeDasharray: 400,
+                strokeDashoffset: 400,
+                animation: "drawPath 2.5s ease-in-out 1.7s forwards",
+              }}
             />
             <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
             <defs>

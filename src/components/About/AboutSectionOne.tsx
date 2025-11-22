@@ -26,8 +26,8 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <ScrollReveal direction="right" delay={0}>
                 <SectionTitle
-                  title="Customer Experience Excellence Since 2020"
-                  paragraph="CX System focuses on the digital transformation of customer experience, offering innovative solutions that enable businesses to create lasting relationships with their customers through technology and artificial intelligence."
+                  title="Excellence en Expérience Client depuis 2025"
+                  paragraph="CX System se concentre sur la transformation digitale de l'expérience client, offrant des solutions innovantes qui permettent aux entreprises de créer des relations durables avec leurs clients grâce à la technologie et à l'intelligence artificielle."
                   mb="44px"
                 />
               </ScrollReveal>
@@ -36,15 +36,15 @@ const AboutSectionOne = () => {
                 <div className="mb-12 max-w-[570px] lg:mb-0">
                   <div className="mx-[-12px] flex flex-wrap">
                     <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                      <List text="Custom Solutions" />
-                      <List text="Artificial Intelligence" />
-                      <List text="24/7 Support" />
+                      <List text="Solutions Sur Mesure" />
+                      <List text="Intelligence Artificielle" />
+                      <List text="Support 24/7" />
                     </div>
 
                     <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                      <List text="Quick Integration" />
-                      <List text="Measurable ROI" />
-                      <List text="Guaranteed Security" />
+                      <List text="Intégration Rapide" />
+                      <List text="ROI Mesurable" />
+                      <List text="Sécurité Garantie" />
                     </div>
                   </div>
                 </div>

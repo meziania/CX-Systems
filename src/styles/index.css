@@ -341,3 +341,66 @@ layer(base);
 .shine:hover::before {
   left: 100%;
 }
+
+/* Animation SVG - Lignes qui se tracent automatiquement */
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated-path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Animation pour les cercles SVG */
+@keyframes drawCircle {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated-circle {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Animation Logo au survol */
+.logo-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-image {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 0 0 rgba(74, 108, 247, 0));
+}
+
+.logo-hover:hover .logo-image {
+  transform: scale(1.05) rotate(2deg);
+  filter: drop-shadow(0 4px 12px rgba(74, 108, 247, 0.3));
+}
+
+.logo-hover:active .logo-image {
+  transform: scale(0.98) rotate(-1deg);
+}
+
+/* Animation glow pulsante pour le logo au survol */
+@keyframes logoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 4px 12px rgba(74, 108, 247, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 6px 20px rgba(74, 108, 247, 0.5));
+  }
+}
+
+.logo-hover:hover .logo-image {
+  animation: logoGlow 2s ease-in-out infinite;
+}

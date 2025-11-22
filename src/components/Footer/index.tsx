@@ -27,7 +27,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  CX System revolutionizes customer experience management with innovative AI-powered solutions. Transform your business interactions and create lasting customer relationships.
+                  CX System révolutionne la gestion de l&apos;expérience client avec des solutions innovantes alimentées par l&apos;IA. Transformez vos interactions commerciales et créez des relations client durables.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -111,7 +111,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
+                  Liens Utiles
                 </h2>
                 <ul>
                   <li>
@@ -119,15 +119,15 @@ const Footer = () => {
                       href="/blog"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Blog
+                      Projets
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/skills"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Pricing
+                      Compétences
                     </Link>
                   </li>
                   <li>
@@ -135,7 +135,7 @@ const Footer = () => {
                       href="/about"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      About
+                      À Propos
                     </Link>
                   </li>
                 </ul>
@@ -145,15 +145,15 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
+                  Informations
                 </h2>
                 <ul>
                   <li>
                     <Link
-                      href="/"
+                      href="/contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      TOS
+                      Contact
                     </Link>
                   </li>
                   <li>
@@ -161,7 +161,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Privacy Policy
+                      Politique de Confidentialité
                     </Link>
                   </li>
                   <li>
@@ -169,7 +169,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Refund Policy
+                      Mentions Légales
                     </Link>
                   </li>
                 </ul>
@@ -179,7 +179,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
+                  Support & Aide
                 </h2>
                 <ul>
                   <li>
@@ -187,7 +187,7 @@ const Footer = () => {
                       href="/contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Open Support Ticket
+                      Nous Contacter
                     </Link>
                   </li>
                   <li>
@@ -195,7 +195,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Terms of Use
+                      Conditions d&apos;Utilisation
                     </Link>
                   </li>
                   <li>
@@ -203,7 +203,7 @@ const Footer = () => {
                       href="/about"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      About
+                      À Propos
                     </Link>
                   </li>
                 </ul>
@@ -214,7 +214,7 @@ const Footer = () => {
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              Template by{" "}
+              Template par{" "}
               <a
                 href="http://uideck.com"
                 target="_blank"
@@ -223,7 +223,7 @@ const Footer = () => {
               >
                 UIdeck
               </a>{" "}
-              and{" "}
+              et{" "}
               <a
                 href="https://nextjstemplates.com"
                 target="_blank"

@@ -1,58 +1,63 @@
 <svg width="500" height="480" viewBox="0 0 500 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="500" height="480" rx="2" fill="#1D2430"/>
-<rect x="35" y="117" width="225" height="156" rx="2" fill="white" fill-opacity="0.14"/>
-<line opacity="0.1" x1="35" y1="80.5" x2="465" y2="80.5" stroke="white"/>
-<rect x="290" y="117" width="175" height="156" rx="2" fill="white" fill-opacity="0.07"/>
-<rect x="35" y="303" width="430" height="142" rx="2" fill="white" fill-opacity="0.14"/>
-<rect x="194" y="353" width="229" height="8" rx="2" fill="url(#paint0_linear_62_128)" fill-opacity="0.18"/>
-<rect x="194" y="370" width="152" height="8" rx="2" fill="url(#paint1_linear_62_128)" fill-opacity="0.18"/>
-<rect x="194" y="387" width="187" height="8" rx="2" fill="url(#paint2_linear_62_128)" fill-opacity="0.18"/>
-<rect x="59" y="324" width="100" height="100" rx="2" fill="white" fill-opacity="0.22"/>
-<rect opacity="0.1" x="138" y="35" width="327" height="18" rx="2" fill="white"/>
-<circle opacity="0.3" cx="39.2391" cy="44.2391" r="4.23913" fill="white"/>
-<circle opacity="0.3" cx="54.5" cy="44.2391" r="4.23913" fill="white"/>
-<circle opacity="0.3" cx="69.7609" cy="44.2391" r="4.23913" fill="white"/>
-<circle opacity="0.8" cx="377.5" cy="194.5" r="37.5" fill="#4A6CF7"/>
-<mask id="mask0_62_128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="340" y="157" width="75" height="75">
-<circle opacity="0.8" cx="377.5" cy="194.5" r="37.5" fill="#4A6CF7"/>
-</mask>
-<g mask="url(#mask0_62_128)">
-<circle opacity="0.8" cx="377.5" cy="194.5" r="37.5" fill="url(#paint3_radial_62_128)"/>
-<g opacity="0.8" filter="url(#filter0_f_62_128)">
-<circle cx="380.809" cy="176.853" r="15.4412" fill="white"/>
-</g>
-</g>
-<path d="M342.034 231.847C324.964 262.749 277.939 313.186 226.394 267.718" stroke="url(#paint4_linear_62_128)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 2"/>
-<path d="M339.077 230.867L343.973 228.971L344.562 233.656" stroke="url(#paint5_linear_62_128)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 2"/>
-<defs>
-<filter id="filter0_f_62_128" x="344.368" y="140.412" width="72.8823" height="72.8823" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur_62_128"/>
-</filter>
-<linearGradient id="paint0_linear_62_128" x1="308.5" y1="353" x2="308.5" y2="361" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint1_linear_62_128" x1="270" y1="370" x2="270" y2="378" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint2_linear_62_128" x1="287.5" y1="387" x2="287.5" y2="395" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-<radialGradient id="paint3_radial_62_128" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(377.5 194.5) rotate(90) scale(40.2574)">
-<stop stop-opacity="0.47"/>
-<stop offset="1" stop-opacity="0"/>
-</radialGradient>
-<linearGradient id="paint4_linear_62_128" x1="358.554" y1="226.723" x2="242.956" y2="282.349" gradientUnits="userSpaceOnUse">
-<stop stop-color="white" stop-opacity="0.48"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint5_linear_62_128" x1="343.992" y1="228.548" x2="340.23" y2="234.571" gradientUnits="userSpaceOnUse">
-<stop stop-color="white" stop-opacity="0.48"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-</defs>
+  <defs>
+    <linearGradient id="grad3-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A6CF7;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.1" />
+    </linearGradient>
+    <radialGradient id="radGrad1-dark" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#4A6CF7;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.15" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="480" fill="url(#grad3-dark)"/>
+  
+  <!-- Central design: Innovation and growth -->
+  <!-- Main circle with gradient -->
+  <circle cx="250" cy="240" r="120" fill="url(#radGrad1-dark)"/>
+  
+  <!-- Inner elements -->
+  <!-- Rocket/Arrow pointing up -->
+  <path d="M250 180 L240 200 L250 195 L260 200 Z" fill="#4A6CF7" opacity="0.4"/>
+  <rect x="245" y="195" width="10" height="50" rx="5" fill="#4A6CF7" opacity="0.3"/>
+  
+  <!-- Growth chart -->
+  <path d="M180 280 L200 260 L220 270 L240 250 L260 240 L280 220 L300 200" 
+        stroke="#4A6CF7" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="180" cy="280" r="4" fill="#4A6CF7" opacity="0.7"/>
+  <circle cx="300" cy="200" r="4" fill="#4A6CF7" opacity="0.7"/>
+  
+  <!-- Floating icons -->
+  <!-- Gear -->
+  <circle cx="120" cy="150" r="20" fill="none" stroke="#4A6CF7" stroke-width="2" opacity="0.3"/>
+  <circle cx="120" cy="150" r="12" fill="none" stroke="#4A6CF7" stroke-width="1.5" opacity="0.3"/>
+  <line x1="120" y1="130" x2="120" y2="110" stroke="#4A6CF7" stroke-width="2" opacity="0.3"/>
+  <line x1="120" y1="170" x2="120" y2="190" stroke="#4A6CF7" stroke-width="2" opacity="0.3"/>
+  <line x1="100" y1="150" x2="80" y2="150" stroke="#4A6CF7" stroke-width="2" opacity="0.3"/>
+  <line x1="140" y1="150" x2="160" y2="150" stroke="#4A6CF7" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Lightbulb -->
+  <circle cx="380" cy="160" r="18" fill="#8B5CF6" opacity="0.25"/>
+  <rect x="375" y="178" width="10" height="8" rx="2" fill="#8B5CF6" opacity="0.25"/>
+  <path d="M370 178 L390 178" stroke="#8B5CF6" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Database -->
+  <ellipse cx="130" cy="320" rx="25" ry="8" fill="#4A6CF7" opacity="0.2"/>
+  <rect x="105" y="320" width="50" height="40" rx="4" fill="none" stroke="#4A6CF7" stroke-width="2" opacity="0.3"/>
+  <line x1="115" y1="335" x2="135" y2="335" stroke="#4A6CF7" stroke-width="1" opacity="0.3"/>
+  <line x1="115" y1="345" x2="135" y2="345" stroke="#4A6CF7" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Cloud/Server -->
+  <path d="M360 300 Q370 290 380 300 Q390 290 400 300 Q400 310 390 320 Q380 330 370 320 Q360 330 350 320 Q340 310 360 300" 
+        fill="#8B5CF6" opacity="0.2" stroke="#8B5CF6" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Connection dots -->
+  <circle cx="200" cy="200" r="3" fill="#4A6CF7" opacity="0.4"/>
+  <circle cx="300" cy="280" r="3" fill="#8B5CF6" opacity="0.4"/>
+  <circle cx="350" cy="220" r="3" fill="#4A6CF7" opacity="0.4"/>
+  
+  <!-- Connecting lines -->
+  <path d="M200 200 Q250 240 300 280" stroke="#4A6CF7" stroke-width="1.5" fill="none" opacity="0.25" stroke-dasharray="3 3"/>
+  <path d="M300 280 Q325 250 350 220" stroke="#8B5CF6" stroke-width="1.5" fill="none" opacity="0.25" stroke-dasharray="3 3"/>
 </svg>

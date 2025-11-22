@@ -30,8 +30,8 @@ const Services = () => {
         <div className="container">
           <ScrollReveal direction="up" delay={0}>
             <SectionTitle
-              title="Our CX Services"
-              paragraph="Discover our complete range of services dedicated to improving your customer experience. From strategic consulting to technical implementation, we support you at every step."
+              title="Services Proposés"
+              paragraph="Découvrez les services que je propose pour transformer vos idées en solutions digitales performantes. Du développement web aux applications desktop, je vous accompagne dans tous vos projets."
               center
             />
           </ScrollReveal>

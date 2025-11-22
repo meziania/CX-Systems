@@ -7,6 +7,8 @@ export type Project = {
   category: string;
   year: string;
   tags: string[];
+  githubUrl?: string;
+  demoUrl?: string;
 };
 
 

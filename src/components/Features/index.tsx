@@ -10,8 +10,8 @@ const Features = () => {
         <div className="container">
           <ScrollReveal direction="up" delay={0}>
             <SectionTitle
-              title="Main Features"
-              paragraph="Discover the powerful features that make CX System the leading solution for customer experience management. From AI-powered analytics to seamless integrations, we've got everything you need."
+              title="Mes Compétences Techniques"
+              paragraph="Découvrez les technologies et compétences que je maîtrise pour développer des solutions digitales performantes et innovantes. De la conception à la mise en production, je couvre l'ensemble du cycle de développement."
               center
             />
           </ScrollReveal>

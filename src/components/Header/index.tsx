@@ -46,26 +46,29 @@ const Header = () => {
             ? "dark:bg-gray-dark/80 dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-white/80 backdrop-blur-md transition border-b border-gray-200/50 dark:border-gray-700/50"
             : "absolute bg-transparent"
         }`}
+        style={{ 
+          minHeight: sticky ? "80px" : "240px"
+        }}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-auto max-w-full px-4 xl:mr-12 flex items-center">
               <Link
                 href="/"
-                className={`header-logo block flex items-center ${
+                className={`header-logo block flex items-center group logo-hover ${
                   sticky ? "py-2 lg:py-2" : "py-4 lg:py-8"
                 } `}
               >
                 <Image
                   src="/images/logo/logo-2.png"
                   alt="logo"
-                  width={300}
-                  height={80}
-                  className="dark:hidden"
+                  width={500}
+                  height={220}
+                  className="dark:hidden logo-image transition-all duration-300"
                   style={{ 
-                    height: "80px", 
+                    height: sticky ? "60px" : "220px", 
                     width: "auto", 
-                    maxWidth: "300px",
+                    maxWidth: sticky ? "300px" : "500px",
                     objectFit: "contain" 
                   }}
                   priority
@@ -74,13 +77,13 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
-                  width={300}
-                  height={80}
-                  className="hidden dark:block"
+                  width={500}
+                  height={220}
+                  className="hidden dark:block logo-image transition-all duration-300"
                   style={{ 
-                    height: "80px", 
+                    height: sticky ? "60px" : "220px", 
                     width: "auto", 
-                    maxWidth: "300px",
+                    maxWidth: sticky ? "300px" : "500px",
                     objectFit: "contain" 
                   }}
                   priority
@@ -132,9 +135,8 @@ const Header = () => {
                                   : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                               }`}
                             >
-                              <span className="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-                                {menuItem.title}
-                              </span>
+                              {menuItem.title}
+                              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
                             </Link>
                         ) : (
                           <>
@@ -159,10 +161,10 @@ const Header = () => {
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu.map((submenuItem, index) => (
+                              {menuItem.submenu?.map((submenuItem, subIndex) => (
                                 <Link
                                   href={submenuItem.path}
-                                  key={index}
+                                  key={subIndex}
                                   className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-white/70 dark:hover:text-white"
                                 >
                                   {submenuItem.title}
