@@ -24,9 +24,9 @@ const Blog = () => {
               Projets Réalisés par CX Systems
             </h2>
             <p className="text-base leading-relaxed text-body-color">
-              Découvrez nos réalisations concrètes. Chaque projet combine design d'expérience, 
+              Découvrez nos réalisations concrètes. Chaque projet combine design d&apos;expérience, 
               technologie et accompagnement terrain pour créer des solutions innovantes qui 
-              transforment l'expérience client.
+              transforment l&apos;expérience client.
             </p>
           </div>
 

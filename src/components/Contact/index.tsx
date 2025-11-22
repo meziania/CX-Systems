@@ -10,7 +10,7 @@ const Contact = () => {
                 Informations de Contact
               </h2>
               <p className="mb-8 text-base font-medium text-body-color">
-                N'hésitez pas à nous contacter pour toute question ou demande d'information.
+                N&apos;hésitez pas à nous contacter pour toute question ou demande d&apos;information.
               </p>
 
               <div className="space-y-6">
@@ -73,7 +73,7 @@ const Contact = () => {
                       href="tel:+33123456789"
                       className="text-base text-body-color hover:text-primary"
                     >
-                      +33 1 23 45 67 89
+                      +212 699254247
                     </a>
                   </div>
                 </div>
@@ -109,8 +109,8 @@ const Contact = () => {
                       Adresse
                     </h4>
                     <p className="text-base text-body-color">
-                      123 Rue de l'Innovation<br />
-                      75001 Paris, France
+                     
+                      75001 Casablanca, Maroc
                     </p>
                   </div>
                 </div>

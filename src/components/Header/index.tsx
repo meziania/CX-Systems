@@ -49,28 +49,42 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12 flex items-center">
+            <div className="w-auto max-w-full px-4 xl:mr-12 flex items-center">
               <Link
                 href="/"
-                className={`header-logo block w-full flex items-center ${
+                className={`header-logo block flex items-center ${
                   sticky ? "py-2 lg:py-2" : "py-4 lg:py-8"
                 } `}
               >
                 <Image
                   src="/images/logo/logo-2.png"
                   alt="logo"
-                  width={200}
-                  height={50}
-                  className="h-[45px] w-auto max-w-[200px] dark:hidden"
-                  style={{ objectFit: "contain" }}
+                  width={300}
+                  height={80}
+                  className="dark:hidden"
+                  style={{ 
+                    height: "80px", 
+                    width: "auto", 
+                    maxWidth: "300px",
+                    objectFit: "contain" 
+                  }}
+                  priority
+                  unoptimized
                 />
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
-                  width={200}
-                  height={50}
-                  className="hidden h-[45px] w-auto max-w-[200px] dark:block"
-                  style={{ objectFit: "contain" }}
+                  width={300}
+                  height={80}
+                  className="hidden dark:block"
+                  style={{ 
+                    height: "80px", 
+                    width: "auto", 
+                    maxWidth: "300px",
+                    objectFit: "contain" 
+                  }}
+                  priority
+                  unoptimized
                 />
               </Link>
             </div>
