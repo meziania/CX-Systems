@@ -1,4 +1,31 @@
+"use client";
+
+import { useState } from "react";
+import Toast from "../Common/Toast";
+
 const Contact = () => {
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastType, setToastType] = useState<"success" | "error" | "info">("success");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulation d'envoi (remplacer par votre logique d'envoi)
+    setTimeout(() => {
+      setToastMessage("Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.");
+      setToastType("success");
+      setShowToast(true);
+      setIsSubmitting(false);
+      
+      // Réinitialiser le formulaire
+      const form = e.currentTarget;
+      form.reset();
+    }, 1000);
+  };
+
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -181,7 +208,7 @@ const Contact = () => {
               <p className="mb-12 text-center text-base font-medium text-body-color">
                 Notre équipe vous répondra dans les plus brefs délais.
               </p>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -230,8 +257,14 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="w-full rounded-lg bg-primary px-9 py-4 text-base font-semibold text-white shadow-submit transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] dark:shadow-submit-dark">
-                      Envoyer le Message
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="group relative w-full overflow-hidden rounded-lg bg-gradient-to-r from-primary to-purple-600 px-9 py-4 text-base font-semibold text-white shadow-submit transition-all duration-300 hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed dark:shadow-submit-dark shine"
+                    >
+                      <span className="relative z-10">
+                        {isSubmitting ? "Envoi en cours..." : "Envoyer le Message"}
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -240,6 +273,13 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      <Toast
+        message={toastMessage}
+        type={toastType}
+        isVisible={showToast}
+        onClose={() => setShowToast(false)}
+      />
     </section>
   );
 };

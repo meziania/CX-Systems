@@ -1,5 +1,6 @@
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
+import ScrollReveal from "../Common/ScrollReveal";
 import SingleTestimonial from "./SingleTestimonial";
 
 const testimonialData: Testimonial[] = [
@@ -36,15 +37,23 @@ const Testimonials = () => {
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
-        <SectionTitle
-          title="What Our Users Say"
-          paragraph="Hear from businesses that have transformed their customer experience with CX System. Real results from real companies."
-          center
-        />
+        <ScrollReveal direction="up" delay={0}>
+          <SectionTitle
+            title="What Our Users Say"
+            paragraph="Hear from businesses that have transformed their customer experience with CX System. Real results from real companies."
+            center
+          />
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+          {testimonialData.map((testimonial, index) => (
+            <ScrollReveal
+              key={testimonial.id}
+              direction="scale"
+              delay={index * 150}
+            >
+              <SingleTestimonial testimonial={testimonial} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

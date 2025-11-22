@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Project } from "@/types/project";
+import ImageLightbox from "./ImageLightbox";
 
 type ProjectCardProps = {
   project: Project;
@@ -12,6 +13,7 @@ const MAX_DESCRIPTION_LENGTH = 150;
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const description = project.description;
   const isLongDescription = description.length > MAX_DESCRIPTION_LENGTH;
   const truncatedDescription = isLongDescription
@@ -19,21 +21,43 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     : description;
   const displayDescription = isExpanded ? description : truncatedDescription;
 
+  // Déterminer le badge de statut basé sur le client
+  const getStatusBadge = () => {
+    if (project.client === "Projet interne" || project.client === "Projet de fin d'études") {
+      return { text: "Projet personnel", color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200" };
+    }
+    return { text: "En production", color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" };
+  };
+
+  const statusBadge = getStatusBadge();
+
   return (
-    <div className="mb-10 overflow-hidden rounded-lg bg-white shadow-xl dark:bg-[#1D2144]">
-      <div className="relative h-[220px] w-full overflow-hidden">
+    <div className="group mb-10 overflow-hidden rounded-lg bg-white shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 dark:bg-[#1D2144] dark:hover:shadow-primary/20">
+      <div 
+        className="relative h-[220px] w-full cursor-pointer overflow-hidden"
+        onClick={() => setIsLightboxOpen(true)}
+      >
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+        <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+          <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${statusBadge.color}`}>
+            {statusBadge.text}
+          </span>
+        </div>
       </div>
 
       <div className="p-8">
-        <div className="mb-3 flex flex-wrap gap-3 text-sm font-medium text-primary">
+        <div className="mb-3 flex flex-wrap items-center gap-3 text-sm font-medium text-primary">
           <span>{project.category}</span>
           <span className="text-body-color">• {project.year}</span>
+          <span className={`ml-auto rounded-full px-2 py-1 text-xs font-semibold ${statusBadge.color}`}>
+            {statusBadge.text}
+          </span>
         </div>
 
         <h3 className="mb-3 text-2xl font-semibold text-dark dark:text-white">
@@ -54,7 +78,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           )}
         </div>
 
-        <div className="flex flex-wrap items-center justify-between text-sm">
+        <div className="flex flex-wrap items-center justify-between gap-4 text-sm">
           <p className="font-semibold text-dark dark:text-white">
             Client : <span className="font-normal text-body-color">{project.client}</span>
           </p>
@@ -62,7 +86,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-primary/10 px-3 py-1 text-primary"
+                className="cursor-pointer rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-all duration-200 hover:bg-primary hover:text-white"
               >
                 {tag}
               </span>
@@ -70,6 +94,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
         </div>
       </div>
+
+      <ImageLightbox
+        src={project.image}
+        alt={project.title}
+        isOpen={isLightboxOpen}
+        onClose={() => setIsLightboxOpen(false)}
+      />
     </div>
   );
 };

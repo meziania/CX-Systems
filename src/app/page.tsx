@@ -1,5 +1,6 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import TimelineSection from "@/components/About/TimelineSection";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
@@ -16,6 +17,7 @@ export default function Home() {
       <Services />
       <AboutSectionOne />
       <AboutSectionTwo />
+      <TimelineSection />
       <Testimonials />
       <Contact />
     </>

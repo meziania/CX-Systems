@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import ScrollReveal from "../Common/ScrollReveal";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -23,34 +24,36 @@ const AboutSectionOne = () => {
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Customer Experience Excellence Since 2020"
-                paragraph="CX System focuses on the digital transformation of customer experience, offering innovative solutions that enable businesses to create lasting relationships with their customers through technology and artificial intelligence."
-                mb="44px"
-              />
+              <ScrollReveal direction="right" delay={0}>
+                <SectionTitle
+                  title="Customer Experience Excellence Since 2020"
+                  paragraph="CX System focuses on the digital transformation of customer experience, offering innovative solutions that enable businesses to create lasting relationships with their customers through technology and artificial intelligence."
+                  mb="44px"
+                />
+              </ScrollReveal>
 
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Custom Solutions" />
-                    <List text="Artificial Intelligence" />
-                    <List text="24/7 Support" />
-                  </div>
+              <ScrollReveal direction="right" delay={200}>
+                <div className="mb-12 max-w-[570px] lg:mb-0">
+                  <div className="mx-[-12px] flex flex-wrap">
+                    <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                      <List text="Custom Solutions" />
+                      <List text="Artificial Intelligence" />
+                      <List text="24/7 Support" />
+                    </div>
 
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Quick Integration" />
-                    <List text="Measurable ROI" />
-                    <List text="Guaranteed Security" />
+                    <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                      <List text="Quick Integration" />
+                      <List text="Measurable ROI" />
+                      <List text="Guaranteed Security" />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto max-w-[500px] lg:mr-0">
+              <ScrollReveal direction="left" delay={300}>
+                <div className="relative mx-auto max-w-[500px] lg:mr-0">
                 <div className="relative w-full" style={{ paddingBottom: '96%' }}>
                   <Image
                     src="/images/about/about-image.svg"
@@ -70,6 +73,7 @@ const AboutSectionOne = () => {
                   />
                 </div>
               </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>

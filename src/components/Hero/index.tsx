@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Counter from "../Common/Counter";
 
 const Hero = () => {
   return (
@@ -11,26 +12,63 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Revolutionize Customer Experience with CX System
+                <h1 className="mb-4 animate-fade-in-up text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                  <span className="bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
+                    Développeur Full-Stack
+                  </span>{" "}
+                  spécialisé en solutions CX
                 </h1>
-                <p className="mb-12 text-base leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  CX System transforms how your business interacts with customers. 
-                  Our innovative solutions enable you to optimize every touchpoint 
-                  to create exceptional and lasting experiences.
+                <p className="mb-4 animate-fade-in-up text-lg font-medium text-primary dark:text-primary [animation-delay:0.1s]">
+                  Développeur | Architecte Logiciel | Consultant CX
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <p className="mb-8 animate-fade-in-up text-base leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl [animation-delay:0.2s]">
+                  Je transforme vos idées en solutions digitales performantes. 
+                  Spécialisé dans le développement d&apos;applications web et desktop 
+                  avec une approche centrée sur l&apos;expérience utilisateur.
+                </p>
+                
+                {/* Statistiques */}
+                <div className="mb-12 flex flex-wrap items-center justify-center gap-8 animate-fade-in-up sm:gap-12 [animation-delay:0.3s]">
+                  <div className="text-center">
+                    <div className="mb-2 text-3xl font-bold text-primary dark:text-primary sm:text-4xl">
+                      <Counter end={3} suffix="+" duration={1500} />
+                    </div>
+                    <div className="text-sm text-body-color dark:text-body-color-dark sm:text-base">
+                      Projets livrés
+                    </div>
+                  </div>
+                  <div className="hidden h-12 w-px bg-gray-300 dark:bg-gray-600 sm:block"></div>
+                  <div className="text-center">
+                    <div className="mb-2 text-3xl font-bold text-primary dark:text-primary sm:text-4xl">
+                      <Counter end={100} suffix="%" duration={2000} />
+                    </div>
+                    <div className="text-sm text-body-color dark:text-body-color-dark sm:text-base">
+                      Satisfaction client
+                    </div>
+                  </div>
+                  <div className="hidden h-12 w-px bg-gray-300 dark:bg-gray-600 sm:block"></div>
+                  <div className="text-center">
+                    <div className="mb-2 text-3xl font-bold text-primary dark:text-primary sm:text-4xl">
+                      <Counter end={5} suffix="+" duration={1500} />
+                    </div>
+                    <div className="text-sm text-body-color dark:text-body-color-dark sm:text-base">
+                      Technologies maîtrisées
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center justify-center space-y-4 animate-fade-in-up sm:flex-row sm:space-x-4 sm:space-y-0 [animation-delay:0.4s]">
                   <Link
-                    href="/contact"
-                    className="rounded-lg bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 ease-in-out hover:bg-primary/90 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                    href="/blog"
+                    className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-primary to-purple-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] shine"
                   >
-                    Get Started Now
+                    <span className="relative z-10">Voir mes projets</span>
                   </Link>
                   <Link
-                    href="/about"
-                    className="inline-block rounded-lg border-2 border-gray-300 bg-white px-8 py-4 text-base font-semibold text-black transition-all duration-300 ease-in-out hover:border-primary hover:bg-gray-50 hover:text-primary dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-primary dark:hover:bg-gray-700"
+                    href="/contact"
+                    className="inline-block rounded-lg border-2 border-gray-300 bg-white px-8 py-4 text-base font-semibold text-black transition-all duration-300 ease-in-out hover:border-primary hover:bg-gray-50 hover:text-primary hover:shadow-lg dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-primary dark:hover:bg-gray-700"
                   >
-                    Learn More
+                    Me contacter
                   </Link>
                 </div>
               </div>
