@@ -24,9 +24,6 @@ const nextConfig = {
   // Mode strict pour optimiser
   reactStrictMode: true,
   
-  // Optimisations de production
-  swcMinify: true,
-  
   // Headers de sécurité et performance
   async headers() {
     return [

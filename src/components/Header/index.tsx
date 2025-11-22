@@ -62,7 +62,6 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo-2.png"
                   alt="logo"
-<<<<<<< HEAD
                   width={500}
                   height={220}
                   className="dark:hidden logo-image transition-all duration-300"
@@ -70,15 +69,6 @@ const Header = () => {
                     height: sticky ? "60px" : "220px", 
                     width: "auto", 
                     maxWidth: sticky ? "300px" : "500px",
-=======
-                  width={600}
-                  height={160}
-                  className="dark:hidden"
-                  style={{ 
-                    height: "160px", 
-                    width: "auto", 
-                    maxWidth: "600px",
->>>>>>> 2092e6bb0279a40314130ee78153b2aa9ab3df9e
                     objectFit: "contain" 
                   }}
                   priority
@@ -87,7 +77,6 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
-<<<<<<< HEAD
                   width={500}
                   height={220}
                   className="hidden dark:block logo-image transition-all duration-300"
@@ -95,15 +84,6 @@ const Header = () => {
                     height: sticky ? "60px" : "220px", 
                     width: "auto", 
                     maxWidth: sticky ? "300px" : "500px",
-=======
-                  width={600}
-                  height={160}
-                  className="hidden dark:block"
-                  style={{ 
-                    height: "160px", 
-                    width: "auto", 
-                    maxWidth: "600px",
->>>>>>> 2092e6bb0279a40314130ee78153b2aa9ab3df9e
                     objectFit: "contain" 
                   }}
                   priority
