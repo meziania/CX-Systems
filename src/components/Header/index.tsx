@@ -59,13 +59,13 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo-2.png"
                   alt="logo"
-                  width={300}
-                  height={80}
+                  width={600}
+                  height={160}
                   className="dark:hidden"
                   style={{ 
-                    height: "80px", 
+                    height: "160px", 
                     width: "auto", 
-                    maxWidth: "300px",
+                    maxWidth: "600px",
                     objectFit: "contain" 
                   }}
                   priority
@@ -74,13 +74,13 @@ const Header = () => {
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
-                  width={300}
-                  height={80}
+                  width={600}
+                  height={160}
                   className="hidden dark:block"
                   style={{ 
-                    height: "80px", 
+                    height: "160px", 
                     width: "auto", 
-                    maxWidth: "300px",
+                    maxWidth: "600px",
                     objectFit: "contain" 
                   }}
                   priority
