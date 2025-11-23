@@ -23,7 +23,7 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
       <div className="group shadow-two hover:shadow-xl dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark rounded-xl bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] lg:px-6 xl:px-8">
         <div className="mb-5 flex items-center space-x-1 transition-transform duration-300 group-hover:scale-110">{ratingIcons}</div>
         <p className="border-body-color/10 text-body-color mb-8 border-b pb-8 text-base leading-relaxed transition-colors duration-300 dark:border-white/10 dark:text-white group-hover:text-primary dark:group-hover:text-primary">
-          "{content}
+          &ldquo;{content.replace(/"/g, '&quot;')}&rdquo;
         </p>
         <div className="flex items-center">
           <div className="relative mr-4 h-[50px] w-full max-w-[50px] overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-110 group-hover:ring-2 group-hover:ring-primary">
