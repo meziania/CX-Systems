@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import ScrollReveal from "../Common/ScrollReveal";
 
@@ -54,27 +53,25 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <ScrollReveal direction="left" delay={300}>
                 <div className="relative mx-auto max-w-[500px] lg:mr-0">
-                <div className="relative w-full" style={{ paddingBottom: '96%' }}>
-                  <Image
-                    src="/images/about/about-image.svg"
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/about/about-image.svg?v=2"
                     alt="Illustration à propos de CX Systems"
-                    fill
-                    className="object-contain drop-shadow-three dark:hidden"
-                    sizes="(max-width: 768px) 100vw, 500px"
-                    unoptimized
-                    priority={false}
+                    width={500}
+                    height={480}
+                    className="w-full h-auto object-contain drop-shadow-three dark:hidden"
+                    loading="lazy"
                   />
-                  <Image
-                    src="/images/about/about-image-dark.svg"
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/about/about-image-dark.svg?v=2"
                     alt="Illustration à propos de CX Systems"
-                    fill
-                    className="hidden object-contain drop-shadow-three dark:block"
-                    sizes="(max-width: 768px) 100vw, 500px"
-                    unoptimized
-                    priority={false}
+                    width={500}
+                    height={480}
+                    className="hidden w-full h-auto object-contain drop-shadow-three dark:block"
+                    loading="lazy"
                   />
                 </div>
-              </div>
               </ScrollReveal>
             </div>
           </div>

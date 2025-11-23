@@ -50,7 +50,7 @@
   
   <!-- Cloud/Server -->
   <path d="M360 300 Q370 290 380 300 Q390 290 400 300 Q400 310 390 320 Q380 330 370 320 Q360 330 350 320 Q340 310 360 300" 
-        fill="#8B5CF6" opacity="0.1" stroke="#8B5CF6" stroke-width="2" opacity="0.2"/>
+        fill="#8B5CF6" fill-opacity="0.1" stroke="#8B5CF6" stroke-width="2" stroke-opacity="0.2"/>
   
   <!-- Connection dots -->
   <circle cx="200" cy="200" r="3" fill="#4A6CF7" opacity="0.3"/>
